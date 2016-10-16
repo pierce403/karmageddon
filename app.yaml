@@ -1,0 +1,27 @@
+application: top-reddit
+version: 1
+api_version: 1
+runtime: python27
+threadsafe: yes
+
+handlers:
+- url: /
+  script: main.app
+
+- url: /favicon.ico
+  static_files: static/favicon.ico
+  upload: static/favicon.ico
+
+- url: /update
+  script: main.app
+  login: admin
+
+#- url: /.well-known/acme-challenge/AB0Ju9uqCj3V2pdBRDb3xDe53ahXAQLQafQPjUeK9Xk
+#  static_files: static/acme.txt
+#  upload: static/acme.txt
+
+libraries:
+- name: django
+  version: latest
+- name: lxml
+  version: latest
