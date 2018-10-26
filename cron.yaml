@@ -1,4 +1,4 @@
 cron:
 - description: find new transactions
   url: /update
-  schedule: every 2 minutes
+  schedule: every 20 minutes
